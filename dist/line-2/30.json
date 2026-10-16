@@ -1,0 +1,30 @@
+{
+  "name": "The Shared Load",
+  "image": "https://api.imd.fun/artifacts/660b90b224b1ca8e046c5cac006249d9f33b6ba6feaeeabdb765e2b9ba26dae0",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 30
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "ZipBatch"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two bundles share one branch and one carrying limit."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Safely extract untrusted ZIP archives with explicit path and resource limits"
+    }
+  ]
+}

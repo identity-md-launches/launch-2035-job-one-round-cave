@@ -1,0 +1,99 @@
+{
+  "suites": [
+    {
+      "tool": "safezip",
+      "exit_code": 0,
+      "tests": 44,
+      "passed": true
+    },
+    {
+      "tool": "zipaudit",
+      "exit_code": 0,
+      "tests": 16,
+      "passed": true
+    },
+    {
+      "tool": "zipdiff",
+      "exit_code": 0,
+      "tests": 16,
+      "passed": true
+    },
+    {
+      "tool": "zipgate",
+      "exit_code": 0,
+      "tests": 28,
+      "passed": true
+    },
+    {
+      "tool": "zipselect",
+      "exit_code": 0,
+      "tests": 30,
+      "passed": true
+    },
+    {
+      "tool": "zipverify",
+      "exit_code": 0,
+      "tests": 28,
+      "passed": true
+    },
+    {
+      "tool": "zipbatch",
+      "exit_code": 0,
+      "tests": 30,
+      "passed": true
+    }
+  ],
+  "tests_passed": 192,
+  "demo": {
+    "ok": true,
+    "network_used": false,
+    "historical_public_source": "https://api.imd.fun/openapi.json",
+    "capture_bytes": 23132,
+    "plan": {
+      "ok": true,
+      "mode": "batch-plan",
+      "all_payloads_checked": true,
+      "separate_output_roots": true,
+      "archives": [
+        {
+          "archive": "test/scratch/zipbatch-demo-u95dh6fn/research.zip",
+          "archive_sha256": "5c638492b45e60bdf09b9ec5b3dac48951b966d224a44c9e2a04487acee5cdad",
+          "entries": 1,
+          "nodes_including_root": 4,
+          "uncompressed_bytes": 23132,
+          "preflight": {
+            "entries": 1,
+            "directory_bytes": 67,
+            "zip64": false
+          }
+        },
+        {
+          "archive": "test/scratch/zipbatch-demo-u95dh6fn/review.zip",
+          "archive_sha256": "5c638492b45e60bdf09b9ec5b3dac48951b966d224a44c9e2a04487acee5cdad",
+          "entries": 1,
+          "nodes_including_root": 4,
+          "uncompressed_bytes": 23132,
+          "preflight": {
+            "entries": 1,
+            "directory_bytes": 67,
+            "zip64": false
+          }
+        }
+      ],
+      "totals": {
+        "archives": 2,
+        "entries": 2,
+        "nodes_including_roots": 8,
+        "uncompressed_bytes": 46264
+      },
+      "batch_limits": {
+        "archives": 32,
+        "entries": 2,
+        "nodes_including_roots": 8,
+        "uncompressed_bytes": 46264
+      }
+    },
+    "each_fits_alone_but_batch_refused": "total uncompressed limit exceeded",
+    "nothing_extracted": true
+  }
+}

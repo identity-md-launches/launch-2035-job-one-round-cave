@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "goal_byte_identical": true,
+  "older_records_and_previews_byte_identical": true,
+  "new_record": 30,
+  "record_shape_valid": true,
+  "record_image_hash_matches": true,
+  "named_output_untracked": true,
+  "continuation_identical": true,
+  "scope_check_passed": true,
+  "new_files_outside_artifacts_under_100KB": true,
+  "tests_passed": 192,
+  "wall_format": "PNG",
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "preview_format": "JPEG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "unmet_added_mark_visual_requirements": [],
+  "limitations": [
+    "Inherited rock retains photographic appearance.",
+    "Fine bundle hatching softens in the preview.",
+    "Batch deadlines are cooperative; planning reserves no disk space."
+  ]
+}

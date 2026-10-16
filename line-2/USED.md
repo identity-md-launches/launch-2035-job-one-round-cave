@@ -193,3 +193,29 @@
   round-28 assembly approach. No intermediate image was saved to another path.
 - Reviewed full PNG and JPEG. See WALL-29.md and media-check-29.json. Required
   wall-v10.png and canonical wall.png contain identical finished-wall bytes.
+
+## Pepe 30 — The Shared Load
+
+- Kept GOAL.md byte-identical and read gathering/REPORT.md. No supported-case
+  failure was reported. Updated the current-round README entry.
+- Added ZipBatch in its own tools/zipbatch folder. Reused ZipGate and SafeZip
+  for bounded pre-parser inspection, complete payload hashes/CRC, path rules,
+  approvals and interruption. No inherited tool or test changed. Shared limits
+  now cover multiple planned separate extraction trees, including their roots.
+- Reused the shipped historical public IMD OpenAPI capture and provenance.
+  Two illustrative packages each fit 23,132 bytes alone; their combined load
+  needs 46,264 bytes, two entries and eight nodes. The smaller shared allowance
+  was refused. Nothing was extracted and no current network claim was made.
+  No coin, wallet, key, environment read, transaction, signing or payment needed.
+- Ran 30 new tests and all 162 inherited tests: **192 passed**. Checked exact
+  cumulative boundaries, implicit parents, empty roots, exhausted remainders,
+  repeated inputs, input approvals, declaration validation, all policy limits,
+  cooperative interruption, unsafe members, corruption, confinement and CLI.
+- Counted 29 old JSON records and added only record 30 plus its required
+  512-pixel JPEG. Earlier records/previews and all other lines are unchanged.
+- Used built-in imagegen once for a primitive carrying branch and two bundles.
+  Reused the inspected existing line-1/media codecs and in-memory ffmpeg crop
+  for pigment-only assembly. Mapped charcoal to yellow ochre for visibility on
+  dark stone. No draft/crop picture was saved. All pixels outside the new
+  upper-right patch remain identical; both five-digit Pepe hands are preserved.
+  Required upload: wall-v11.png; continuation: wall.png. See WALL-30.md.
