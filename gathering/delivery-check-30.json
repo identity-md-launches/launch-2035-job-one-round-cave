@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "line_files_unchanged": 449,
+  "line_commands_passed": 83,
+  "line_unittest_cases": 543,
+  "shared_tests_passed_in_isolation": 53,
+  "gallery_records": 149,
+  "painted_records": 49,
+  "placeholders": 100,
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "PNG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_format": "JPEG",
+  "preview_bytes": 88070,
+  "wall_sha256": "6dba4a75305b2c64033e3e57127d63eaca152c9b758d80fa8f4a9110b5007750",
+  "pixels_changed_inside": 9531,
+  "pixels_changed_outside": 0,
+  "visual_requirements_unmet": [],
+  "limitation": "Local byte/path checks do not independently certify behavior or visual quality."
+}

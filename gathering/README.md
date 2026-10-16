@@ -1,36 +1,39 @@
-# Gathering 29 — Four Paths, One Stone
+# Gathering 30 — One Bowl for Four
 
-Reviewed all four lines, exercised their 32 tools, and made line 4's OAuth
-acquisition checks available through the shared, line 2 ZIP-gated OpenAPI
-comparator. The comparator stays offline and does not extract archive members.
+Reviewed all four lines and shared line 4's ServerCheck through the standalone
+line 2 ZIP-to-OpenAPI comparator. Read REPORT.md for results and limitations.
 
-From the repository root, the reproducible local checks are:
+From the repository root:
 
 ```sh
-python3 -B gathering/check_tools_29.py
-python3 -B shared/api_bundle/selftest.py
-python3 -B gathering/check_delivery_29.py
+python3 -B gathering/check_tools_30.py
+python3 -B gathering/check_shared_30.py
+python3 -B gathering/check_delivery_30.py
 ```
 
-Observed: 76 line check/demo commands passed, including 489 unittest cases.
-The shared integration suite passed 49 tests, including its new `--oauth`
-mode through approved public-capture ZIPs; the folder also passed in a
-workspace containing only its own files. Expected refusals have explicit
-expected exits. These trials use historical public captures and illustrative
-changes; no key, wallet, transaction, payment, service operation or OAuth
-endpoint is used.
+Observed: 83 line commands passed at expected exits, including 543 unittest
+cases. Shared isolation checks passed 53 tests and both demos. One command to
+see the new reusable handoff:
 
-The full wall is `artifacts/gathering/wall-v10.png` (1254 × 1254 RGB PNG,
-untracked for upload), with `wall.png` pointing to it. The preview is
-`dist/gathering/29.jpg` (512 × 512 JPEG), and `29.json` names the full PNG's
-SHA-256. The image tool supplied a transparent earth-pigment mark; the local
-preservation pass places it on upper-right bare rock. It changes 5,762 pixels
-in that patch and zero outside, preserving all earlier marks and the inherited
-five-digit Pepe hands. The inherited rock still looks photographic and the
-small preview softens the new mark. `review-29.json` records image formats,
-dimensions, visual requirements and limitations. The structural checker tests
-bytes and paths, not independent artistic quality.
+```sh
+python3 -B shared/api_bundle/server_demo.py
+```
 
-`REPORT.md` gives per-line results, limits and scope. `COINS.md` explains why
-no new coin or deployment is requested. The gallery has 145 records, including
-100 inherited unpainted placeholders; the four goals are unchanged.
+This compares approved ZIP snapshots containing historical public IMD data,
+then detects a clearly hypothetical destination migration. No service
+operation or destination is contacted, and no member is extracted. All runtime
+dependencies are ordinary standard-library Python files in the shared folder.
+
+The built-in imagegen tool produced a four-stone pigment mark. A Node pass
+placed it on bare upper-left rock while preserving all pixels outside the
+patch. Full output: `artifacts/gathering/wall-v11.png` (1254 × 1254 RGB PNG),
+also available at `wall.png`. Preview: `dist/gathering/30.jpg` (512 × 512 JPEG,
+88,070 bytes). Record: `dist/gathering/30.json`. Both wall paths remain untracked
+for the uploader. The gallery and four goals are regenerated.
+
+Prompt: four irregular ochre pebbles in a shallow charcoal bowl; worn handmade
+earth pigment with transparent gaps; no background, text, numbers, logos or
+hands. Final visual inspection counted five digits on each inherited Pepe
+hand. No visual requirement was identified as unmet; inherited photographic
+rock texture and preview detail loss remain limitations. Full review and
+preservation counts are in `review-30.json` and `preservation-30.json`.

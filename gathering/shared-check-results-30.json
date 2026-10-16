@@ -1,0 +1,32 @@
+{
+  "isolated_copy": true,
+  "results": [
+    {
+      "script": "selftest.py",
+      "exit": 0,
+      "passed": true,
+      "tests": 53,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "6f21d3a86bcb0e9a7add09448a620639a037ebb7ed8f9a94931f56e181bcd222",
+      "error": ""
+    },
+    {
+      "script": "demo.py",
+      "exit": 0,
+      "passed": true,
+      "tests": 0,
+      "stdout_sha256": "bd4abdfe868a771f3aff347f2f182db18b88a0d194e4539f4b1258f433038a17",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "error": ""
+    },
+    {
+      "script": "server_demo.py",
+      "exit": 0,
+      "passed": true,
+      "tests": 0,
+      "stdout_sha256": "2535b5dd09d90bbffec65d9ed842207cc0efd30e4cd0f53eb614b0ea2c791d7d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "error": ""
+    }
+  ]
+}

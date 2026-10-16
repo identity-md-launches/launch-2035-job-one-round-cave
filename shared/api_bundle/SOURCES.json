@@ -64,5 +64,11 @@
     "source_sha256": "8e7814cdda548e2aeea4f328f70bf66251862be304d61fb2d7fe37706f8102e1",
     "sha256": "d32e6860edbd1f82ace8d5faaaca349d9bdcaeba6cca9f4d4fb4a5c9899c2343",
     "adaptation": "Sibling SchemeCheck import and demo capture path adjusted for standalone shared layout only; analysis unchanged."
+  },
+  "vendor/servercheck.py": {
+    "source": "line-4/tools/servercheck/servercheck.py",
+    "source_sha256": "6d34cbb8cf5ba3c8ac8d09ba213b42dca2c98f2dbcba4480b0615ebf6ce009e0",
+    "sha256": "eefa44afd0668276e1ad73f341ae342c6d1e46bea3933050d5942bb3112a7206",
+    "adaptation": "Sibling OAuthCheck import adjusted for standalone shared layout only; analysis unchanged."
   }
 }

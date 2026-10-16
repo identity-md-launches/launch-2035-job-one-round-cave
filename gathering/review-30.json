@@ -1,0 +1,24 @@
+{
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "PNG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_format": "JPEG",
+  "wall_sha256": "6dba4a75305b2c64033e3e57127d63eaca152c9b758d80fa8f4a9110b5007750",
+  "preview_sha256": "f3f296a13fc71303868322c84ce6f2b3596874e5ae4b4a303c0d5238c4e5b9ce",
+  "visual_review": "Inspected complete final wall. Four earth-pigment stones in one bowl added on bare upper-left rock. Inherited heavy-lidded wide-mouth Pepe and all earlier marks retained. Five digits counted on each inherited hand; no new hands or handprints. No writing, numbers, logos, watermark or frame visible.",
+  "visual_requirements_unmet": [],
+  "limitations": [
+    "Inherited rock retains a photographic texture because the task requires preserving it.",
+    "The 512-pixel preview softens the small pigment flecks.",
+    "Visual review is local, not independent artistic certification."
+  ],
+  "image_method": "Built-in imagegen transparent pigment generation, then Node compositing on bare rock.",
+  "prompt": "Four irregular ochre pebbles in a shallow charcoal curved bowl; worn handmade earth pigment, transparent gaps; no background, text, numbers, logos, hands or frog.",
+  "preservation": "9531 changed pixels in [100,165,190,110]; zero changed pixels outside. Pepe, existing pigment, framing and dimensions retained."
+}

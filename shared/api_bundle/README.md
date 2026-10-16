@@ -155,3 +155,25 @@ payload reader. This is input bounding, not an operating-system RAM/CPU sandbox.
 Stored/deflated ZIPs, 1,000 entries, 16 MiB per file, 64 MiB total uncompressed, ratio 200, normalized portable names. Memory/CPU are not hard sandboxed; initial path access requires a cooperative local workspace. API analysis covers a bounded OpenAPI 3.0/3.1 subset and local object-member references. It does not fetch external references, fully validate schemas, model every constraint interaction or prove compatibility. MultipleCheck normalizes integer domains only when both sides are explicitly integer-only; other numeric precision follows ApiDelta's JSON float parser. Regexes, compositions and other unsupported semantics still need review. Description hashes cannot detect undocumented runtime changes.
 
 A gathering-28 read-only GET of `https://api.imd.fun/openapi.json` on 2026-10-16 matched the bundled capture: 23,132 bytes, SHA-256 `be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a`. Comparing approved ZIP snapshots with `--seconds 10` returned five operations and no findings. Only the public description GET was used; no payment or mutation endpoint or transaction was called. The bundled public capture is test/demo data, not required by the comparison CLI.
+
+## Effective server destinations (gathering 30)
+
+Add `--servers` to the existing CLI comparison to include line 4 ServerCheck.
+The Python API accepts `servers=True`. This includes OAuth acquisition, security
+transport and all earlier schema checks; `--oauth` alone and the default keep
+their earlier behavior. No declared destination is contacted.
+
+ServerCheck compares effective operation/path/root destination references,
+bounded finite template domains and default selections. Missing old finite
+destinations are potential breaks; open template coverage remains review.
+It compares literal references, with no base resolution, URL normalization,
+DNS, runtime behavior or full compatibility proof. Limits and conservative
+refusals from ServerCheck and the archive gate remain in force.
+
+Run `python3 -B shared/api_bundle/server_demo.py` from the repository root.
+Observed: a hypothetical operation destination change in the historical public
+IMD capture produces a destination-removal finding through two SHA-approved
+ZIPs. Unchanged capture comparison is clean. Nothing is extracted or sent.
+`python3 -B shared/api_bundle/selftest.py` passed 53 tests, including four new
+server/archive integrations. The standalone folder contains every dependency
+as ordinary Python source; `SOURCES.json` records original and adapted hashes.

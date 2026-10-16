@@ -16,6 +16,75 @@ import api_bundle as bundle
 
 class BundleTests(unittest.TestCase):
 
+    def test_servers_approved_capture_and_cli(self):
+        old = json.loads(Path(__file__).with_name('imd-openapi.json').read_bytes())
+        new = copy.deepcopy(old)
+        new['paths']['/requests/quote']['post']['servers'] = [{'url': 'https://example.invalid/migrated'}]
+        a, b = self.archive('server-old.zip', old), self.archive('server-new.zip', new)
+        approved = dict(old_sha256=hashlib.sha256(a.read_bytes()).hexdigest(),
+                        new_sha256=hashlib.sha256(b.read_bytes()).hexdigest())
+        report = bundle.compare(a, b, servers=True, **approved)
+        self.assertEqual(report['status'], 'breaking')
+        self.assertEqual(report['operations_compared'], 5)
+        self.assertIn('server_destination_removed', [f['code'] for f in report['findings']])
+        self.assertTrue(report['bundle_inputs']['new']['approved_sha256_checked'])
+        self.assertNotIn('server_destination_removed', [f['code'] for f in bundle.compare(a, b)['findings']])
+        run = subprocess.run([sys.executable, '-B', bundle.__file__, str(a), str(b), '--servers',
+                              '--old-sha256', approved['old_sha256'], '--new-sha256', approved['new_sha256']],
+                             capture_output=True, text=True, timeout=10)
+        self.assertEqual(run.returncode, 1, run.stdout + run.stderr)
+        self.assertEqual(json.loads(run.stdout)['status'], 'breaking')
+        self.assertEqual(bundle.compare(a, a, servers=True)['findings'], [])
+
+    def test_servers_finite_coverage_and_open_review(self):
+        old = copy.deepcopy(self.doc)
+        old['servers'] = [{'url': 'https://{region}.example.invalid', 'variables': {
+            'region': {'default': 'a', 'enum': ['a', 'b']}}}]
+        a = self.archive('old.zip', old)
+        new = copy.deepcopy(old)
+        new['servers'][0]['variables']['region']['enum'] = ['a']
+        b = self.archive('new.zip', new)
+        self.assertEqual(bundle.compare(a, b, servers=True)['status'], 'breaking')
+        del new['servers'][0]['variables']['region']['enum']
+        b = self.archive('new.zip', new)
+        report = bundle.compare(a, b, servers=True)
+        self.assertEqual(report['status'], 'review_required')
+        self.assertIn('server_destination_unresolved', [f['code'] for f in report['findings']])
+
+    def test_servers_override_and_malformed_effective_declaration(self):
+        old = copy.deepcopy(self.doc)
+        old['servers'] = [{'url': 'https://a.example.invalid'}]
+        old['paths']['/items']['get']['servers'] = [{'url': '/stable'}]
+        new = copy.deepcopy(old)
+        new['servers'] = [{'url': 'https://b.example.invalid'}]
+        a, b = self.archive('a.zip', old), self.archive('b.zip', new)
+        self.assertNotIn('server_destination_removed', [f['code'] for f in bundle.compare(a, b, servers=True)['findings']])
+        new['paths']['/items']['get']['servers'] = []
+        b = self.archive('b.zip', new)
+        with self.assertRaisesRegex(ValueError, 'empty or invalid'):
+            bundle.compare(a, b, servers=True)
+        run = subprocess.run([sys.executable, '-B', bundle.__file__, str(a), str(b), '--servers'],
+                             capture_output=True, text=True, timeout=10)
+        self.assertEqual(run.returncode, 2)
+        self.assertFalse(json.loads(run.stdout)['ok'])
+
+    def test_servers_keeps_oauth_and_archive_checks(self):
+        old = json.loads(Path(__file__).with_name('imd-openapi.json').read_bytes())
+        old['components']['securitySchemes']['illustrativeOAuth'] = {
+            'type': 'oauth2', 'flows': {'clientCredentials': {
+                'tokenUrl': 'https://example.invalid/token', 'scopes': {'read': 'Read'}}}}
+        old['paths']['/requests/quote']['post']['security'] = [{'illustrativeOAuth': ['read']}]
+        new = copy.deepcopy(old)
+        new['components']['securitySchemes']['illustrativeOAuth']['flows']['clientCredentials']['tokenUrl'] += '-v2'
+        a, b = self.archive('a.zip', old), self.archive('b.zip', new)
+        self.assertIn('oauth_acquisition_incompatible', [f['code'] for f in bundle.compare(a, b, servers=True)['findings']])
+        with self.assertRaisesRegex(ValueError, 'SHA-256'):
+            bundle.compare(a, b, servers=True, new_sha256=hashlib.sha256(a.read_bytes()).hexdigest())
+        with mock.patch.object(bundle.zipfile, 'ZipFile') as parser:
+            with self.assertRaisesRegex(ValueError, 'directory byte limit'):
+                bundle.compare(a, b, servers=True, directory_bytes=1)
+            parser.assert_not_called()
+
     def test_oauth_flow_change_through_approved_zip_snapshots(self):
         old = json.loads(Path(__file__).with_name('imd-openapi.json').read_bytes())
         old['components']['securitySchemes']['illustrativeOAuth'] = {
