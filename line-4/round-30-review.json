@@ -1,0 +1,28 @@
+{
+  "wall": "artifacts/line-4/wall-v11.png",
+  "width": 1254,
+  "height": 1254,
+  "format": "PNG",
+  "mode": "RGB",
+  "preview": "dist/line-4/30.jpg",
+  "preview_width": 512,
+  "preview_height": 512,
+  "preview_format": "JPEG",
+  "visual_review": {
+    "method": "Agent inspected full final PNG and JPEG preview using view_image.",
+    "new_mark": "Two worn charcoal doorways joined by a thin ochre path on bare lower-right rock.",
+    "pepe": "Existing wide mouth and heavy-lidded eyes preserved exactly outside the addition.",
+    "hands": "Two existing hands, each visually counted as four fingers and a thumb; no new hands or handprints.",
+    "writing": "No new letters, numbers, captions, signatures, logos, watermarks, borders or frames observed.",
+    "preservation": "Zero decoded RGB pixels outside addition bounds changed; original dimensions, cracks, light and framing retained.",
+    "palette": "New pigment uses charcoal and yellow ochre; original pigments retained."
+  },
+  "unmet_visual_requirements": [
+    "Inherited cave rock retains a photographic appearance; changing it would violate the required preservation of rock and framing."
+  ],
+  "limitations": [
+    "No independent visual approval. Small JPEG preview softens the thin ochre connector."
+  ],
+  "generator": "Installed mcp image generate_image tool (flux-schnell), followed by pigment-only Node compositing.",
+  "prompt": "Two irregular charcoal stone arches linked by a short yellow ochre path, prehistoric worn pigments, no text or hands; transfer onto existing bare cave rock."
+}

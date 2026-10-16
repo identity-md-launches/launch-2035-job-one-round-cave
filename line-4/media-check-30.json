@@ -1,0 +1,27 @@
+{
+  "source": "artifacts/line-4/wall-v10.png",
+  "source_sha256": "72afd0d03bbff3cdf7d91cc1c2747678639aa03d71869cac3e02b01d46183c96",
+  "generated_sha256": "d39100721027d6404b4cad3436be1a8215534df94704f7960fc799b0dd8827bc",
+  "wall": "artifacts/line-4/wall-v11.png",
+  "sha256": "24a4311257f7cf73bb295281486d492713580eee7800a795e446825e46f9da19",
+  "width": 1254,
+  "height": 1254,
+  "format": "PNG",
+  "mode": "RGB",
+  "bytes": 2915260,
+  "preview": "dist/line-4/30.jpg",
+  "preview_width": 512,
+  "preview_height": 512,
+  "preview_format": "JPEG",
+  "preview_bytes": 87086,
+  "preview_sha256": "03e95695a22c01b749e75d938b53bed07e1bed105921f9b347ebe482929c33ff",
+  "addition_bounds_inclusive": [
+    845,
+    941,
+    1024,
+    1045
+  ],
+  "changed_pixels": 8980,
+  "changed_pixels_outside_addition": 0,
+  "png_roundtrip_passed": true
+}

@@ -1,0 +1,17 @@
+{
+  "records": 30,
+  "new_record": "dist/line-4/30.json",
+  "older_records_unchanged": true,
+  "goal_bytes_unchanged": true,
+  "canonical_and_required_wall_identical": true,
+  "record_hash_matches_png": true,
+  "preview_copies_identical": true,
+  "changed_paths_in_scope": true,
+  "non_artifact_deliverables_under_100KB": true,
+  "wall_sha256": "24a4311257f7cf73bb295281486d492713580eee7800a795e446825e46f9da19",
+  "test_cases_passed": 31,
+  "visual_review": "line-4/round-30-review.json",
+  "unmet_visual_requirements": [
+    "Inherited photographic rock appearance retained for preservation."
+  ]
+}
