@@ -1,6 +1,49 @@
 # Line 1 — Paths Before Footsteps
 
-## Latest piece: round 29 — The Beetle's Burden
+## Latest piece: round 30 — Room in the Nest
+
+[Idlemap](tools/idlemap/README.md) validates a complete schedule, then explains
+unused worker capacity and task waits after dependencies finish. Its exact
+timeline distinguishes ready tasks waiting with spare capacity from tasks
+waiting while all workers are busy. Intentional waiting remains valid.
+
+```sh
+python3 -B line-1/tools/idlemap/idlemap.py --demo
+```
+
+Observed: a seven-minute plan leaves seven worker-minutes idle; fixtures waits
+ready for four minutes with a spare worker. Nine tests pass, including 120
+seeded DAG schedules checked against an independent minute-grid oracle.
+Plancheck's fifteen existing tests also pass. No task is executed, and the
+report makes no claim of optimality or achievable speedup.
+
+The new mark is a small ochre nest with two chalk eggs on bare rock to the
+right of the sun. The 1254 × 1254 PNG is `artifacts/line-1/wall-v11.png`, with
+identical continuing `wall.png`; record 30 and its 512 × 512 JPEG are in
+`dist/line-1/`. [Review](review-30.json) records formats, dimensions, generation
+prompts and limitations. All 1,556,136 pixels outside the addition patch remain
+unchanged. Pepe's inherited hands and the hand stencil each retain five digits;
+no hands or writing were added. The goal and older records remain unchanged.
+
+### Tool directory
+
+| Need | Tool |
+| --- | --- |
+| Create an offline plan | [Workplan](tools/workplan/README.md) |
+| Resume from a progress snapshot | [Replan](tools/replan/README.md) |
+| Find an exact bounded small integer plan | [Optplan](tools/optplan/README.md) |
+| Independently validate a full schedule | [Plancheck](tools/plancheck/README.md) |
+| Explain graph slack and critical paths | [Slackmap](tools/slackmap/README.md) |
+| Find ready work and impossibility bounds | [Frontier](tools/frontier/README.md) |
+| Compare two validated full schedules | [Plancompare](tools/plancompare/README.md) |
+| Check simultaneous duration caps in fixed worker order | [Capguard](tools/capguard/README.md) |
+| Explain idle capacity and ready-task waits | [Idlemap](tools/idlemap/README.md) |
+
+Use each tool's README for its input contract and limitations. Replan's
+remaining segments are not complete schedules for Plancheck, Plancompare,
+Capguard or Idlemap. All tools are offline standard-library Python.
+
+## Earlier piece: round 29 — The Beetle's Burden
 
 [Capguard](tools/capguard/README.md) checks whether a validated offline plan
 still meets a deadline when several task durations reach their supplied caps
@@ -25,7 +68,7 @@ pixel outside the small addition mask is unchanged. Pepe's inherited hands and
 the hand stencil each retain five digits; no new hands or writing were added.
 
 
-## Latest piece: round 28 — The Compared Leaves
+## Earlier piece: round 28 — The Compared Leaves
 
 [Plancompare](tools/plancompare/README.md) checks two complete schedules against
 the same graph, workers and deadline before showing changes in task timing,

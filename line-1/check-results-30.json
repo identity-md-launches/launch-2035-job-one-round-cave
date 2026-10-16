@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "command": "python3 -B line-1/tools/idlemap/selftest.py",
+      "exit_code": 0,
+      "result": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.437s\n\nOK"
+    },
+    {
+      "command": "python3 -B line-1/tools/plancheck/selftest.py",
+      "exit_code": 0,
+      "result": "test_bad_graphs (__main__.Checks.test_bad_graphs) ... ok\ntest_bad_values_and_progress (__main__.Checks.test_bad_values_and_progress) ... ok\ntest_cli (__main__.Checks.test_cli) ... ok\ntest_coverage (__main__.Checks.test_coverage) ... ok\ntest_deadline_and_untrusted_claims (__main__.Checks.test_deadline_and_untrusted_claims) ... ok\ntest_demo (__main__.Checks.test_demo) ... ok\ntest_dependency (__main__.Checks.test_dependency) ... ok\ntest_durations_and_intervals (__main__.Checks.test_durations_and_intervals) ... ok\ntest_exact_decimal (__main__.Checks.test_exact_decimal) ... ok\ntest_existing_planners (__main__.Checks.test_existing_planners) ... ok\ntest_idle_is_valid (__main__.Checks.test_idle_is_valid) ... ok\ntest_nested_worker_overlaps (__main__.Checks.test_nested_worker_overlaps) ... ok\ntest_read_boundary (__main__.Checks.test_read_boundary) ... ok\ntest_valid_and_immutable (__main__.Checks.test_valid_and_immutable) ... ok\ntest_worker_and_units (__main__.Checks.test_worker_and_units) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.410s\n\nOK"
+    },
+    {
+      "command": "python3 -B line-1/tools/idlemap/idlemap.py --demo",
+      "exit_code": 0,
+      "analyzed": true,
+      "idle_worker_minutes": "7",
+      "ready_spare_worker_minutes": "4"
+    },
+    {
+      "command": "python3 -B line-1/tools/idlemap/idlemap.py --tasks line-1/tools/plancheck/tasks.json --plan line-1/tools/plancheck/plan.json --workers 2 --budget 10",
+      "exit_code": 0,
+      "analyzed": true,
+      "idle_worker_minutes": "5",
+      "ready_spare_worker_minutes": "0"
+    }
+  ],
+  "independent_oracle_schedules": 120,
+  "local_observations_only": true
+}

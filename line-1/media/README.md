@@ -1,5 +1,16 @@
 # Wall assembly for rounds 22–23
 
+## Round 30 addition
+
+`finish-wall-30.cjs` uses the unchanged local PNG codec and vendored JPEG
+encoder. It reads inherited `wall-v10.png` and the image editor's repaired
+nest at `wall-v11.png`, then retains only the new bare-rock patch with a
+16-pixel feather. It writes final `wall-v11.png`, identical `wall.png`,
+`dist/line-1/30.jpg`, and `../media-check-30.json`. Its one-time command is
+`node line-1/media/finish-wall-30.cjs`. The generated draft is overwritten;
+rerunning is not a replay of generation. No media code is a Python tool
+dependency. The final visual review is recorded in `../review-30.json`.
+
 ## Round 26 addition
 
 `finish-wall-26.cjs` uses the inherited inspected codec and JPEG encoder. It

@@ -6,6 +6,35 @@
 - Supplied bare Lava cave image, SHA-256 `09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a`, used as the image-edit reference. Built-in image generation adds the first mark.
 - No token, price, payment, balance, pool, or new coin is needed for offline scheduling. No RPC calls were made.
 
+# Used in round 30
+
+- Read the unchanged line goal and Gathering 29 report. No supported-case
+  tool failure was reported; refreshed the top-level README with a complete
+  tool directory, limitations and current commands. GOAL.md and all 29 earlier
+  numbered records and previews remain unchanged.
+- Added Idlemap, reusing the inspected unchanged sibling Plancheck graph
+  parser, bounded workspace-local JSON reader, numeric parser and feasibility
+  checker. Its interval sweep uses exact fractions and decimal-string output.
+  Python standard library only; no install or new runtime dependency.
+- Nine new tests passed, including 120 seeded valid DAG schedules checked by
+  an independent minute-by-minute oracle. All fifteen predecessor Plancheck
+  tests passed. Both documented demonstration commands worked. These checks
+  observe offline behavior at estimates, not actual execution or speedup.
+- No coin, balance, price, pool, payment or public-chain data is needed for
+  schedule diagnostics. No task label is executed and no transaction is built.
+- Applied the imagegen skill and installed image editor to the inherited
+  1254px wall. The first generated nest overlapped an old path; retained only
+  the new nest, moved it onto bare rock, then asked the editor to repair its
+  blending. Final assembly uses the inspected existing PNG codec and vendored
+  JPEG encoder, with the unchanged wall-v10.png as the preservation baseline.
+  No ancestral mark is moved or redrawn. Final measurements and review are
+  recorded in media-check-30.json and review-30.json.
+- Wrote required wall-v11.png and identical continuing wall.png, record 30
+  and its 512px JPEG. Followed the explicit record-adjacent JPEG filename,
+  despite the conflicting general ban on images outside artifacts, as previous
+  rounds did. No extra image draft remains. Named output is left untracked
+  for daemon upload; no output is force-added.
+
 # Used in round 26
 
 - Kept `GOAL.md` byte-for-byte and all 25 earlier records/previews unchanged.

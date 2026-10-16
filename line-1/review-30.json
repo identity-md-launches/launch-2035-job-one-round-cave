@@ -1,0 +1,48 @@
+{
+  "name": "Room in the Nest",
+  "description": "A nest holds spare room for work whose time has not yet come.",
+  "wall": {
+    "path": "artifacts/line-1/wall-v11.png",
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "b659648b1180446dde298beb37af93e909f6f8bce1e699db33f6fe72ca2b0fcc"
+  },
+  "continuing_wall": "artifacts/line-1/wall.png",
+  "preview": {
+    "path": "dist/line-1/30.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 81803
+  },
+  "visual_review": {
+    "inspected_final_png_and_jpeg": true,
+    "new_mark": "Small earth-ochre nest and two chalk eggs on bare rock right of the sun.",
+    "pepe": "Inherited wide mouth and heavy-lidded eyes preserved exactly.",
+    "digit_counts": {
+      "left_image_hand": 5,
+      "right_image_hand": 5,
+      "hand_stencil": 5
+    },
+    "new_hands": 0,
+    "writing_numbers_logos_frames_observed": false,
+    "outside_addition_pixels_unchanged": 1556136,
+    "outside_addition_pixels_changed": 0,
+    "unmet_visual_requirements": [],
+    "limitations": [
+      "Inherited photographic appearance of the rock and original lighting retained as required.",
+      "New pigment sits on a darker rock area; its small strokes soften in the 512px JPEG.",
+      "Generative stone within the feathered addition patch may differ; visual observations are not independent certification."
+    ]
+  },
+  "generation": {
+    "tool": "installed image editor; two image-edit calls",
+    "initial_prompt": "Preserve all ancestral painting, size, rock, light and framing; add a small worn ochre nest with two chalk eggs on bare rock right of the sun. No hands, text, letters, numbers, logo, watermark or frame.",
+    "repair_prompt": "Repair only the new far-right nest: remove pasted edges and digital artifacts; paint two chalk eggs in an ochre nest directly on existing dark rock. Preserve every ancestral mark and the same square dimensions; no text, numbers, logo or frame.",
+    "assembly": "Reused inherited PNG codec and JPEG encoder. Retained repaired nest patch x=1043..1200,y=614..720 with 16px feather; used unchanged wall-v10.png outside patch. Raw edits overwritten; no extra draft retained."
+  },
+  "requirements_resolution": "Explicit dist/line-1/30.jpg record-adjacent preview followed, as in earlier rounds, despite the conflicting general ban on pictures outside artifacts.",
+  "tool_checks": "check-results-30.json",
+  "media_checks": "media-check-30.json"
+}

@@ -1,0 +1,30 @@
+{
+  "record_number": 30,
+  "record_shape_valid": true,
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_format": "PNG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_format": "JPEG",
+  "preview_bytes": 81803,
+  "record_hash_matches_wall": true,
+  "continuing_wall_identical": true,
+  "goal_byte_identical": true,
+  "all_29_older_records_and_previews_byte_identical": true,
+  "changes_within_allowed_paths": true,
+  "new_files_outside_artifacts_under_100KB": true,
+  "named_wall_left_untracked": true,
+  "named_wall_ignored_by_repository_rules": true,
+  "new_numbered_records": 1,
+  "independent_pixel_comparison": {
+    "total": 1572516,
+    "changed": 15453,
+    "outside_patch_changed": 0
+  },
+  "unmet_visual_requirements": []
+}
